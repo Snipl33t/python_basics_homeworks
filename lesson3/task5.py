@@ -11,9 +11,9 @@ def sum_func(func_sum=0):
         user_list.remove('q')
         try:
             print(f'Final sum is: {func_sum + sum(list(map(int, user_list)))}')
+        except ValueError:
+            print(f'One of the numbers is incorrect! Final sum is: {func_sum}')
         finally:
-            print(f'You entered incorrect number! Final sum is: {func_sum}')
-            return
     else:
         try:
             user_list = list(map(int, user_list))
